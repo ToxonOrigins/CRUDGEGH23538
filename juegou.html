@@ -32,7 +32,7 @@
               <label class="btn btn-outline-dark " :for="'btnradiog'+g.id"> {{g.nombreg}}</label>
               </div>
           </div>
-          <label class="btn btn-outline-primary" v-on:click="esconderg = true">Añadir otro genero</label>
+          <label class="btn btn-outline-primary"  v-on:dblclick="esconderg = false" v-on:click="esconderg = true">Añadir otro genero</label>
           <div v-show="esconderg" bv><input type="text" name="nombreng" id="nombreng" v-model="nombreg">
             <button type="button" class="btn btn-success btn-sm" v-on:click="grabarg() , esconderg=false">Guardar</button>
           </div>
@@ -44,7 +44,7 @@
               <label class="btn btn-outline-dark " :for="'btnradio'+c.id" for="{{consola}}">{{c.nombrec}}</label>
             </div>
           </div>
-          <button class="btn btn-outline-primary" v-on:click="esconderc = true">Añadir otra consola </button>
+          <button class="btn btn-outline-primary" v-on:dblclick="esconderc = false"  v-on:click="esconderc = true">Añadir otra consola </button>
           <div v-show="esconderc"><input type="text" name="nombrenc" id="nombrenc" v-model="nombrec">
             <button type="button" class="btn btn-success btn-sm" v-on:click="grabarc(), esconderc=false;">Guardar</button>
           </div>

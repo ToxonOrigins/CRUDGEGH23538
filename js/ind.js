@@ -15,6 +15,12 @@ createApp({
             anio: "",
             consola: 0,
             imagen: "",
+            login:false,
+        }
+    },
+    mounted() {
+        if (sessionStorage.login == "true") {
+            this.login = true;
         }
     },
     methods: {

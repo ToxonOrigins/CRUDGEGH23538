@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingreso - Codigo Gamer</title>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="shortcut icon" href=""><!--Agregar icono en pestaña-->
-  <link rel="shortcut icon" href="./imagenes/logo.jpg" type="image/x-icon">
-  <script defer src="./js/general.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="shortcut icon" href="game_5930147.png" type="image/x-icon">
+  
   <link rel="stylesheet" href="./css/general.css">
   <link rel="stylesheet" href="./css/styles.css">
-  <script defer src="./js/registro_py.js"></script>
+  
 </head>
 
 <body>
@@ -30,52 +30,52 @@
               <div class="card-3d-wrapper">
                 <div class="card-front">
                   <div class="center-wrap">
-                    <form onsubmit="return validl();">
                       <div class="section text-center">
                         <h4 class="mb-4 pb-3">Iniciar Sesion</h4>
                         <div class="form-group">
-                          <input type="email" name="mail" class="form-style" id="mail" placeholder="Email">
+                          <input type="email" name="mail" v-model="mail" class="form-style" id="mail" placeholder="Email">
                           <span id="validarmail"></span>
                           <i class="input-icon uil uil-at"></i>
                         </div>
                         <div class="form-group mt-2">
-                          <input type="password" class="form-style" id="clave" placeholder="Contraseña"> <span
+                          <input type="password" class="form-style" v-model="clave" id="clave" placeholder="Contraseña"> <span
                             id="validarclave"></span>
                           <i class="input-icon uil uil-lock-alt"></i>
                         </div>
-                        <input class="btn mt-4" id="ingreso" value="Ingresar" type="submit">
-                    </form><!-- link para entrar a la pagina al login-->
+                        <button class="btn mt-4" id="ingreso" @click="validl()" >Ingresar </button>
                     <p class="mb-0 mt-4 text-center"><a href="" class="link">Olvidaste tu contraseña?</a></p>
-                    <!-- link para entrar a la pagina de olvide contrseña -->
                   </div>
                 </div>
               </div>
               <div class="card-back">
                 <div class="center-wrap">
                   <div class="section text-center">
-                      <h4 class="mb-3 pb-3">Registrarse</h4>
-                      <div class="form-group">
-                        <input type="text" class="form-style" id="nombre" name="nombre" v-model="nombre" placeholder="Nombre Completo" type="na"> <span
-                          id="validarnombre"></span>
-                        <i class="input-icon uil uil-user"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="tel" class="form-style" id="tele" name="telefono" v-model="telefono" placeholder="Numero de Celular"> <span
-                          id="validartele"></span>
-                        <i class="input-icon uil uil-phone"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="email" class="form-style" id="mailr" name="mail" v-model="mailr" placeholder="Email"> <span
-                          id="validarmailr"></span>
-                        <i class="input-icon uil uil-at"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="password" class="form-style" id="claver" name="mail" v-model="claver" placeholder="Contraseña"><span
-                          id="validarclaver"></span>
-                        <i class="input-icon uil uil-lock-alt"></i>
-                      </div>
-                      <input class="btn mt-4" id="registro" value="Registrar" type="submit" @onclick="registr()">
-
+                    <h4 class="mb-3 pb-3">Registrarse</h4>
+                    <div class="form-group">
+                      <input type="text" class="form-style" id="nombre" name="nombre" v-model="nombre"
+                        placeholder="Nombre Completo" type="na">
+                      <span id="validarnombre"></span>
+                      <i class="input-icon uil uil-user"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="tel" class="form-style" id="tele" name="telefono" v-model="telefono"
+                        placeholder="Numero de Celular">
+                      <span  id="validartele"></span>
+                      <i class="input-icon uil uil-phone"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="email" class="form-style" id="mailr" name="mail" v-model="mailr" placeholder="Email">
+                      <span id="validarmailr"></span>
+                      <i class="input-icon uil uil-at"></i>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="password" class="form-style" id="claver" name="mail" v-model="claver"
+                        placeholder="Contraseña">
+                      <span id="validarclaver"></span>
+                      <i class="input-icon uil uil-lock-alt"></i>
+                    </div>
+                    <button class="btn mt-4" id="registro"  @click="validr()">Registrar
+                    </button>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,9 @@
   </div>
   </div>
   <footer></footer>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><script  src="./js/registro_py.js"></script> <script src="./js/general.js"></script>
 </body>
 
 </html>

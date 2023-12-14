@@ -111,7 +111,7 @@ createApp({
                     console.error(err);
                     alert("Error al Agregar")
                 },
-                 this.generos.pop())
+                    this.generos.pop())
 
         },
         grabarc() {
@@ -134,7 +134,7 @@ createApp({
                     console.error(err);
                     alert("Error al agregar consola")
                 },
-                this.consolas.pop())
+                    this.consolas.pop())
 
         },
     },

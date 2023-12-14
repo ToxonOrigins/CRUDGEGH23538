@@ -39,3 +39,6 @@ td {
 input[type="radio"] {
     display: none;
   }
+.btn-outline-dark{
+margin: 0 1px;
+  }
