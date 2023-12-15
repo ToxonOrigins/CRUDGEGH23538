@@ -24,7 +24,7 @@ createApp({
     methods: {
         validr() {
             mail = this.mailr,
-                clave = this.claver;
+            clave = this.claver;
             telefono = parseInt(this.telefono);
             nombre = this.nombre;
             if (mail == "") {
@@ -35,7 +35,7 @@ createApp({
             if (clave.length < 8) {
                 document.getElementById("validarclaver").innerHTML = "La contraseña tiene menos que 8 caracteres";
                 this.error = true;
-            } else if (clave.length < 18) {
+            } else if (clave.length > 18) {
                 document.getElementById("validarclaver").innerHTML = "La contraseña tiene mas que 18 caracteres";
                 this.error = true;
             } else { document.getElementById("validarclaver").innerHTML = ""; }
