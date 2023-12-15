@@ -9,7 +9,7 @@ body {
 
 table {
   margin-top: 10%;
-  width: 910px;
+  width: 860px;
 }
 
 tr {
@@ -19,24 +19,19 @@ tr {
 }
 
 .card-block .btn-outline-primary {
-
   bottom: 0;
   left: 0;
   position: absolute;
 }
 
 td {
-  width: 300px;
-  height: 350px;
+  width: 200px;
+  height: 250px;
 }
-
-/* Flip Cards CSS */
 
 .card-flip {
   position: relative;
-
   transform-style: preserve-3d;
-
   transition: all 0.5s ease-out;
   background: white;
   border: none;
@@ -54,16 +49,21 @@ td {
   z-index: 1;
 
 }
-
+.front img{
+  border-radius: 5px;
+}
 .card-flip .back {
   position: absolute;
   z-index: 0;
   transform: rotateY(-180deg);
-  width: 300px;
-  height: 350px;
+  width: 200px;
+  height: 250px;
   text-align: center;
 }
 
 .card-container:hover .card-flip {
   transform: rotateY(180deg);
+}
+.card-container{
+  margin: auto 3px  3px;
 }

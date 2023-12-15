@@ -3,8 +3,7 @@ createApp({
     data() {
         return {
             usuarios: [],
-            // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
-            url: 'http://localhost:5000/usuarios',
+            url: 'http://gehg235.pythonanywhere.com/usuarios',
             error: false,
             cargando: true,
             nombre: "",

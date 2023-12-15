@@ -1,7 +1,7 @@
 body{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
-	line-height: 1.7;
+	
 	color: #ea7d0f;
 	background-color: #a01d1d;
   overflow: hidden;
@@ -190,6 +190,9 @@ form span{
 
   padding: 0%;
 }
-container{
-  height: 50vh;
+.py-5{
+  padding-top: 2.5rem !important
+}
+header{
+  z-index: 1;
 }

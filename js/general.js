@@ -1,7 +1,5 @@
 head=`
-<header class="header">
-        
-        <nav>
+        <nav class="header">
             <div class="container">
                     <nav class="menu">
                         <a href="index.html">Inicio</a>
@@ -10,7 +8,6 @@ head=`
                     </nav>
                 </div>
         </nav>
-    </header>
     `
 document.querySelector("header").innerHTML=head
 foot=` <h4><p>Sitio desarrollado por Gabriel Hurtado Guimarey</p></h4>`

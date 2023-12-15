@@ -3,12 +3,9 @@ createApp({
     data() {
         return {
             juegos: [],
-            //url:'http://localhost:5000/productos', 
-            // si el backend esta corriendo local  usar localhost 5000(si no lo subieron a pythonanywhere)
-            url: 'http://localhost:5000/juegos',   // si ya lo subieron a pythonanywhere
+            url: 'http://gehg235.pythonanywhere.com/juegos',  
             error: false,
             cargando: true,
-            /*atributos para el guardar los valores del formulario */
             id: 0,
             nombre: "",
             genero: 0,
@@ -21,7 +18,7 @@ createApp({
     mounted() {
         if (sessionStorage.login == "true") {
             this.login = true;
-        }
+        } 
     },
     methods: {
         fetchData(url) {
@@ -42,13 +39,13 @@ createApp({
                 method: 'DELETE',
             }
             fetch(url, options)
-                .then(res => res.text()) // or res.json()
+                .then(res => res.text()) 
                 .then(res => {
                     alert('Registro Eliminado')
-                    location.reload(); // recarga el json luego de eliminado el registro
+                    location.reload();
                 })
         },
-     
+    
     },
     created() {
         this.fetchData(this.url)
